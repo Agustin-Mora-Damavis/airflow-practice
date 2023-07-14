@@ -2,10 +2,12 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 
 from datetime import datetime
+import time
 
 
 def _show_hello():
-    print("Hello World!)
+    time.sleep(20.0)
+    print("Hello World!")
 
 
 with DAG(
